@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="whith=device-whith, initail-scale=1-0">
+        <title> Contact</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">à Propos</a></li>
+                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="Projects.html">Projets</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="hobbies.html">Centres d'intérêts|Activités sportives</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>Contacter-moi</h2>
+            <form id="contactform">
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" id="email" placeholder="Votre email" required>
+                <textarea id="message" placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <p id="feedback"></p>
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event){
+                event.preventDefault();
+                let nom=document.getElementById("nom").value;
+                let email=document.getElementById("email").value;
+                let message=document.getElementById("message").value;
+
+                if(nom ===""||email ===""||message ==="" ){
+                    alert("Tous les champs sont obligatoire !");
+                }else{
+                    document.getElementById("feedback").textContent="Message envoyé avec succès !";
+                }
+            });
+        </script>
+        <footer>
+            <p> copy print 2025 Mon portfolio|Tous droits réservés</p>
+        </footer>
+    </body>
+</html>
